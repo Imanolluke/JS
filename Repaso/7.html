@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Basicos</h1>
+<h2>Ejercicio 7</h2>
+
+<p id="texto"></p>
+
+</body>
+<script type="text/javascript">
+
+var num = parseInt(prompt("escribe un número"));
+var boolean = false;
+do{
+    if(num%2 ==0){
+    document.getElementById("texto").innerHTML = "es un numero divisible por 2";
+    boolean = true;
+
+}else if(num%3==0){
+    document.getElementById("texto").innerHTML = "es un numero divisible por 3";
+    boolean = true;
+    
+}
+else if(num%5==0){
+    document.getElementById("texto").innerHTML = "es un numero divisible por 5";
+    boolean = true;
+    
+}
+else if(num%7==0){
+    document.getElementById("texto").innerHTML = "es un numero divisible por 7";
+    boolean = true;
+    
+}else{
+    document.getElementById("texto").innerHTML = "no se puede dividir ni por 2, 3, 5 y 7";
+}
+
+}while(bolean == false)
+
+
+
+
+</script>
+</html>

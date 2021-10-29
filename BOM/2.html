@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2 BOM</title>
+</head>
+<body>
+</body>
+    <script>
+        //let cuerpo = document.getElementsByTagName("body");
+        //let espacio = document.createElement("br");
+        let formulario = document.getElementsByTagName("form");
+        document.write("la URL del documento es: " + document.URL);
+        document.write("<br>");
+       // espacio;
+        document.write("el navagador que se está utilizando es: " +window.navigator.appCodeName);
+        document.write("<br>");
+        document.write("el titulo del documento es: " + document.title);
+        document.write("<br>");
+        document.write(formulario.length + " formularios");
+        document.write("<br>");
+        document.write(document.body.offsetHeight+" de alto");
+        document.write("<br>");
+        document.write(document.body.offsetWidth+" de ancho");
+    </script>
+
+</html>

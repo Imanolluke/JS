@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Ventana</title>
+</head>
+<body>
+    <h4>Nueva Ventana</h4>
+    <input type="button" value="Mover arriba" onclick="arriba()">
+    <input type="button" value="Mover abajo" onclick="abajo()">
+    <input type="button" value="Mover a la izquierda" onclick="izquierda()">
+    <input type="button" value="Mover a la derecha" onclick="derecha()">
+    <input type="button" value="Más grande" onclick="mas()">
+    <input type="button" value="Más pequeño" onclick="menos()">
+   
+</body>
+<script>
+    function arriba() {
+        window.moveBy(0, -10);
+    }
+    function abajo() {
+        window.moveBy(0, 10);
+    }
+    function derecha() {
+        window.moveBy(10, 0);
+    }
+    function izquierda() {
+        window.moveBy(-10, 0);
+    }
+    function mas(){
+       
+            window.resizeTo( window.innerWidth * 2, window.innerHeight * 2);
+        
+    }
+    function menos() {
+        
+        if(window.innerWidth > 100  && window.innerHeight > 100){
+            window.resizeTo(window.innerHeight/2, window.innerWidth/2);
+        }
+    }
+
+</script>
+</html>

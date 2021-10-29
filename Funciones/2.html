@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Funciones</h1>
+<h2>Ejercicio 2</h2>
+
+<p id="texto"></p>
+
+
+
+</body>
+<script type="text/javascript">
+ 
+
+ var num = parseInt(prompt("escribe un numero"))
+
+
+function resultado(num){
+    
+    if(num%2==0){
+        var resultado = "es par";
+    }else{
+        resultado = "es impar";
+    }
+
+   document.getElementById("texto").innerHTML = "El número dado " + resultado;
+
+}
+
+resultado(num);
+
+
+
+
+
+</script>
+</html>

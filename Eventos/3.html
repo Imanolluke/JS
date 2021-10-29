@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+  <meta charset="UTF-8"/>
+</head>
+<body>
+    <h1>Enlaces de colores</h1>
+ </body>
+ <a>Cambiar a rojo</a><br/>
+ <a> Cambiar a azul</a><br/>
+<h2 id="cambiar">Esta línea debe cambiar de color.</h2>
+</body>
+<script type="text/javascript">
+    window.onload = iniciar;
+    let change= document.getElementById("cambiar");
+    let enlace = document.getElementsByTagName("a");
+    function iniciar(){
+     
+      
+        for (let i= 0; i < enlace.length; i++){
+            enlace[i].addEventListener("click", cambiar);
+        }
+    }
+   
+    function cambiar(){
+        if (this == enlace[0]) {
+            change.style.color = "red";
+        }else{
+            change.style.color = "blue";
+        }
+    }
+   
+    </script>
+</html>
+
+
+
+ 

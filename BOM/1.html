@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+    <style>
+        input{
+            background-color: red;
+        }
+    </style>
+</head>
+<body id="cuerpo">
+    <h1>Ejercicio 1</h1>
+    <div id="fondo">
+        <input type="button" value="pulsa" onclick="masDiv()">
+    </div>
+</body>
+<script type="text/javascript">
+    function masDiv(){
+        let cuerpo = document.getElementById("cuerpo");
+        let elemento = document.createElement("div");
+        elemento.textContent="Soy un nuevo DIV";
+        elemento.style.backgroundColor = '#'+Math.random().toString(16).substr(2,6);
+        cuerpo.appendChild(elemento);
+    }
+</script>
+
+</html>

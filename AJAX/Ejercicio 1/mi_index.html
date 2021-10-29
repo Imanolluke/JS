@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<h2>The XMLHttpRequest Object</h2>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+// 1º crear objeto
+  var xhttp = new XMLHttpRequest();
+// 3º definir metodo/peticion
+  xhttp.open("GET", "ejercicio11.html", true);
+// 2º evento / funcion
+  xhttp.onreadystatechange = mostrar_datos;
+  
+  function mostrar_datos() {
+    document.getElementById("estados").innerHTML = "aaaa";
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+     
+    }
+  }
+// 4º lanzar peticion a servidor
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>

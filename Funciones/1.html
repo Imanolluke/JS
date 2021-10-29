@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Funciones</h1>
+<h2>Ejercicio 1</h2>
+
+<p id="texto"></p>
+<p id="texto1"></p>
+<p id="texto2"></p>
+
+
+</body>
+<script type="text/javascript">
+ 
+
+ var frase = prompt("escribe una frase");
+
+
+function contarLetras(frase){
+    
+     var cantidad = frase.match(/[A-Z]/gi).length;
+
+   document.getElementById("texto").innerHTML = "La cantidad de caracteres es " + cantidad;
+
+}
+
+function contarMayus(frase){
+    var cantidad = frase.match(/[A-Z]/g).length;
+
+document.getElementById("texto1").innerHTML = "La cantidad de mayusculas es " + cantidad;
+
+}
+
+
+function contarMinus(frase){
+    var cantidad = frase.match(/[a-z]/g).length;
+
+document.getElementById("texto2").innerHTML = "La cantidad de minusculas es " + cantidad;
+
+}
+contarLetras(frase);
+contarMayus(frase);
+contarMinus(frase);
+
+
+
+
+
+</script>
+</html>

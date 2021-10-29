@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Funciones</h1>
+<h2>Ejercicio 3</h2>
+
+<p id="texto"></p>
+
+
+
+</body>
+<script type="text/javascript">
+ 
+
+ 
+ var letras =['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+
+
+function resultado(){
+    
+    do{
+        var dni = parseInt(prompt("escribe los números de tu dni"))
+    }while(dni<0 || dni>99999999)
+
+    
+    var resultado = dni%23;
+    resultado = letras[resultado];
+
+
+   document.getElementById("texto").innerHTML = "El número de tu dni es " + resultado;
+
+}
+
+resultado();
+
+
+
+
+
+</script>
+</html>

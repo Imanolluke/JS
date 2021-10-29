@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <title>Eventos</title> 
+  <meta charset="UTF-8"/>
+    <body>
+<p id="parrafo">Este parrafo cambia de color</p>
+    </body>
+    
+<script type="text/javascript">
+    window.onload = iniciar;
+
+    
+
+    function iniciar(){
+        var parrafo = document.getElementById("parrafo");
+            parrafo.addEventListener("click", cambiar);
+            parrafo.addEventListener("dblclick", cambiar);
+        }
+
+    function cambiar(){
+        if(event.type == "click"){
+            parrafo.style.color = "red";
+        }else if(event.type == "dblclick"){
+            parrafo.style.color = "blue";
+        
+        }
+    }
+
+   
+    </script>
+</html>

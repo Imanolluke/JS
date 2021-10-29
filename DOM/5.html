@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+    <head>
+   <title>Ver todos los párrafos</title> 
+<style type="text/css">
+   #cuadro { width: 400px; height: 200px; border: 1px black solid; float: right; }
+   p { font-size: 1em; font-family: arial; }
+</style>
+</head>
+<body>
+   <h1>Acceso a los parrafos</h1>
+   <div id="cuadro"></div>
+     <p>Este es el primer parrafo de esta pagina</p>
+     <p>Este es el segundo parrafo</p>
+     <p>Y este el tercero</p>
+     <p onclick="acceder()">Pulsa en este cuarto parrafo para volver 
+         a verlos todos en el recuadro de la derecha.</p>
+     <p onclick="borrar()">Y pulsa en el quinto para borrar el 
+         recuadro de la derecha.</p> 
+
+<script type="text/javascript">
+
+//primer paso es declarar las variables con las que vamos a trabajar
+// y asignar a esas variables el cuadro y los parrafos que vamos a usar
+
+    var caja = document.getElementById("cuadro");
+    var parrafos = document.getElementsByTagName("p");
+
+// una vez que tenemos los parrafos tenemos que asignar a cada uno
+// un evento al hacer click
+
+    for(var i= 0; i < parrafos.length; i++){
+        parrafos[i].addEventListener("click", cambiar);
+
+    }
+    
+// ahora creamos la función acceder para atrapar todos los "p"
+// y meterlos como nodos del cuadro
+
+    function acceder() {
+
+        
+        for(var i = 0; i < parrafos.length; i++){
+            caja.appendChild(parrafos[i]);
+        }    
+    }
+
+    function borrar(){
+
+        caja.parentNode.removeChild(caja);
+
+    }
+   
+    function cambiar(){
+        caja.appendChild(this);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Funciones</h1>
+<h2>Ejercicio 4</h2>
+
+<p id="texto"></p>
+<script type="text/javascript">
+ 
+    var frase = [];
+    var letra = ['a', 'e', 'i', 'o', 'u'];
+    frase = prompt('Escribe una frase');
+    var counter=0;
+    
+
+    
+    function vocales(frase) {
+       
+        for (let i = 0; i< frase.length; i++) {
+            for (let j = 0; j < letra.length; j++) {
+                if(frase.charAt(i) == letra[j] || frase.charAt(i) == letra[j].toLocaleUpperCase()){
+                    counter++;
+                }
+                
+            }
+            
+        }
+        
+        document.getElementById("texto").innerHTML = "el numero de vocales es "+ counter;
+       
+    }
+    
+    vocales(frase);
+    
+    
+    
+    
+    </script>
+
+
+</body>
+
+</html>

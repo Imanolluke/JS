@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3 BOM</title>
+</head>
+<style>
+    #ventana{
+        height: 200px;
+        width: 200px;
+    }
+</style>
+<body>
+    <input type="button" value="Nueva Ventana" onclick="Nuevo()">
+    <input type="button" value="Stop" onclick="Stop()">
+    
+<script>
+    function Nuevo(){
+        let nuevaVentana = window.open("nuevaVentana2.html", "", "width=200,height=200");
+    }
+
+
+    function Stop(){
+        let nuevaVentana2 = window.close("nuevaVentana2.html");
+    }
+</script>
+</body>
+</html>

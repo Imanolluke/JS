@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <title>Eventos</title> 
+  <meta charset="UTF-8"/>
+    <body>
+<a href="https://adobe.com">Adobe</a>
+<br>
+<a href="https://Apple.com">Apple</a>
+<br>
+<a href="https://Google.com">Google</a>
+<br>    
+<textarea name="" id="texto" cols="30" rows="1"></textarea>
+    </body>
+    
+<script type="text/javascript">
+    window.onload = iniciar;
+
+    let texto = document.getElementById("texto");
+    function iniciar(){
+
+        let enlace = document.getElementsByTagName("a");
+
+        for(let i = 0; i< enlace.length;i++){
+            enlace[i].addEventListener("mouseover", mostrar);
+           
+        }
+    }
+
+    function mostrar(e){
+
+        texto.innerHTML = e.target.href;
+
+    }
+
+   
+    </script>
+</html>
+
+
+
+
+
+
+ 

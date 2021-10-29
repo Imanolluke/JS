@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Repaso 2</h1>
+<h2>Ejercicio 2</h2>
+
+<p id="texto"></p>
+<script>
+
+  
+
+    function calculo(){
+        var counter, maximo = 0;  
+        for(var i=0; i < 3; i++){
+
+         
+    var codigo = parseInt(prompt("Inserte un codigo de vendedor"));
+    var precio = parseInt(prompt("importe de sus ventas"));
+     
+   if(precio > maximo){
+       counter = 1;
+       maximo = precio;
+   }else if(precio == maximo){
+       counter++;
+       
+   }
+          
+    document.getElementById("texto").innerHTML = "el importe máximo vendido es de: " + maximo + " y los han conseguido estos vendedores: " + counter;
+
+    }
+}
+
+    calculo();
+
+
+    
+    
+</script>
+</body>
+
+</html>

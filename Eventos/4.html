@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+  <meta charset="UTF-8"/>
+</head>
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Eventos</title> 
+  <meta charset="UTF-8"/>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+ </body>
+ <style type="text/css">
+    .linea{
+        height:100px; 
+        width:100px; 
+        background:blue;
+        display:inline-block;
+    }
+    </style>
+    <body>
+    <div class="linea">ASR31</div>
+    <div class="linea">ASR32</div>
+    <div class="linea">SM21</div>
+    <div class="linea">SM22</div>
+    <div class="linea">DW31</div>
+    <div class="linea">DW32</div>
+    </body>
+    
+<script type="text/javascript">
+    window.onload = iniciar;
+    let cuadro= document.getElementsByClassName("linea");
+   
+    function iniciar(){
+     
+      
+        for (let i= 0; i < cuadro.length; i++){
+            cuadro[i].addEventListener("mouseover", cambiarVerde);
+            cuadro[i].addEventListener("mouseout", cambiarAzul);
+            cuadro[i].addEventListener("click", cambiarRojo);
+        
+        }
+    }
+   
+    function cambiarRojo(){
+            this.style.backgroundColor= "red";
+
+    }
+
+    function cambiarVerde(){
+        this.style.backgroundColor = "green";
+    }
+
+    function cambiarAzul(){
+        this.style.backgroundColor = "blue";
+    }
+   
+    </script>
+</html>
+
+
+
+
+
+
+ 

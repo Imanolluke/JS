@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Funciones</h1>
+<h2>Ejercicio 5</h2>
+
+<p id="texto"></p>
+<script>
+    var frase = prompt('escribe una frase');
+    var palindromo = true;
+    var sinEspacios = "";
+
+
+    
+    function quitarEspacios(frase){
+        for (let i = 0; i < frase.length; i++) {
+            if (frase.charAt(i) != " ") {
+                sinEspacios += frase.charAt(i);
+            }  
+        }
+ 
+   
+    }
+    function esPalindromo(sinEspacios) {
+        for (let i = 0; i< sinEspacios.length; i++) {
+
+            if(sinEspacios.charAt(i).toLocaleUpperCase() != sinEspacios.charAt(sinEspacios.length - i - 1).toLocaleUpperCase()){
+                palindromo = false;
+            }
+            
+        }
+        if(palindromo == true){
+            document.getElementById("texto").innerHTML = "Es palindromo";
+        }else{
+            document.getElementById("texto").innerHTML = "No es palindromo";
+        }
+        
+    }
+
+    quitarEspacios(frase);
+    esPalindromo(sinEspacios);
+
+    
+</script>
+</body>
+
+</html>

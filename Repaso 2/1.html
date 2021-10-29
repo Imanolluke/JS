@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Ejercicios JavaScript Funciones</h1>
+<h2>Ejercicio 5</h2>
+
+<p id="texto"></p>
+<script>
+
+    var limInf = parseInt(prompt("limite inferior"));
+    var limSup = parseInt(prompt("limite superior"));
+
+
+    function calculo(limSup,limInf){
+        var array = [];
+        var counter =0;
+        for(var i=limInf; i < limSup; i++){
+            if(i%2==0){
+                array[counter]=i;
+                counter++;
+            }else if(i%3==0){
+                array[counter]=i;
+                counter++;
+            }
+
+        }
+        document.getElementById("texto").innerHTML = "Los numeros que son multiplos de 2 y de 3 son: "+ array;
+
+    }
+
+    calculo(limSup,limInf);
+
+
+    
+    
+</script>
+</body>
+
+</html>

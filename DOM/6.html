@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+    <meta charset="utf-8">
+   <title>Manipular nodos</title> 
+<style type="text/css">
+   #cuadro  { width: 400px; height: 250px; border: 1px black solid; float: right; 
+            font-family: arial; overflow: auto }
+   p  { font-size: 1em; font-family: arial;  }
+</style>
+</head>
+<body>
+  <h1>Manipulación  de nodos. </h1>
+  <div id="cuadro">
+     <h4 id="primero">primer texto fijo</h4>
+     <h4 id="segundo">Segundo texto fijo</h4>
+     <h4 id="tercero">Tercer texto fijo</h4>
+  </div>
+     <p>Pulsa en los siguientes párrafos, para cambiar los textos de la caja de la derecha</p>
+     <p onclick="restaurar()">Pulsa en este párrafo para restaurar el estado inicial de la caja.</p>
+     <p onclick="debajo()">Insertar nuevo elemento debajo de todos</p>
+     <p onclick="delante()">Insertar nuevo elemento delante del segundo.</p>
+     <p onclick="reemplazar()">reemplazar el primer elemento de la caja por otro nuevo</p>
+     <p onclick="suprimir()">Suprimir el tercer párrafo</p>
+     <p onclick="cambiar()">Poner el segundo texto en último lugar</p>
+     <p onclick="copiar()">Copia del nuevo elemento, se inserta al final</p>
+
+    
+<script type="text/javascript">
+
+let caja = document.getElementById('cuadro');
+let counter = 4;
+
+
+    function debajo(){
+        
+        caja.innerHTML += "<h4>texto número "+ counter +"</h4>";
+        counter++;
+
+    }
+
+    function delante(){
+        
+        let parrafo =  caja.getElementsByTagName("h4");
+        parrafo[0].innerHTML += "<h4>Texto que va delante</h4>";
+        
+    }
+
+    function reemplazar(){
+
+        let parrafo =  caja.getElementsByTagName("h4");
+        parrafo[0].innerHTML = "Texto de reemplazo";
+  
+    }
+
+    function suprimir(){
+
+        // mi primera opción ha sido la de crear un string vacio
+        // pero es mejor hacerlo como removechild
+
+        //let parrafo =  caja.getElementsByTagName("h4");
+        // parrafo[2].innerHTML = "";
+
+        let tercero = document.getElementById("tercero");
+        caja.removeChild(tercero);
+        
+    }
+
+    function cambiar(){
+
+        let segundo = document.getElementById("segundo");
+        caja.removeChild(segundo);
+        caja.appendChild(segundo);
+        
+    }
+
+    function copiar(){
+
+        let parrafo = document.createElement("h4");
+     
+        let elemento = document.createTextNode("nuevo elemento");
+     
+        parrafo.appendChild(elemento);
+        caja.appendChild(parrafo);
+
+        
+    }
+
+    function restaurar(){
+
+        let parrafos = document.getElementsByTagName("h4");
+        console.log(parrafos.length);
+            for(let i = 0 ; i < parrafos.length;i++){
+                caja.removeChild(parrafos[i]);
+            }
+
+            //Por alguna razón que no entiendo muy bien no se me borran todos a la vez
+            // el for si que lso cogue todos ( lo he comprobado con un console.log) pero luego no los elimina a la vez
+
+
+
+
+
+}
+
+    
+
+</script>
+
+
+</body>
+</html>

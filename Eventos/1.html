@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<body>   
+<head>
+    <meta charset="UTF-8"/>
+    <p id="texto">Aún no has pulsado ningun botón</p>
+<script type="text/javascript">
+window.onload = iniciar;
+
+ function iniciar(){
+     for(let i =1; i<=3;i++){
+        let button1 = document.createElement("input");
+        button1.value = i;
+        button1.type = "button";
+        button1.addEventListener("click", mostrar);
+        document.body.appendChild(button1);
+     }
+ }
+
+ 
+
+ function mostrar(){
+     document.getElementById("texto").innerHTML = "has pulsado es siguiente botón" + this.value;
+    // console.log("has pulsado es siguiente boton" + this.value);
+
+ }
+
+
+</script>
+</head>
+</body>
+</html> 
